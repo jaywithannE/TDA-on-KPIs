@@ -1,73 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>TDA on KPIs</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>TDA on KPIs</title>
 
-    <!-- Reveal.js core styles -->
-    <link rel="stylesheet" href="dist/reset.css" />
-    <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/black.css" />
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/black.css" />
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" />
 
-    <!-- Syntax highlighting theme -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  <!-- MathJax for LaTeX rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>Welcome</h2>
+        <p>To me beautiful <small>presentation</small>.</p>
+      </section>
 
-    <!-- MathJax (for LaTeX support) -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  </head>
+      <section>
+        <h2>Math Example</h2>
+        <p>
+          $$
+          \int_0^1 x^2 \, dx = \frac{1}{3}
+          $$
+        </p>
+        <small>This is a small math note.</small>
+      </section>
 
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <!-- Slide 1 -->
-        <section>
-          <h2>Welcome</h2>
-          <p>To me beautiful <small>presentation</small>.</p>
-        </section>
-
-        <!-- Slide 2 -->
-        <section>
-          <h2>Math Example</h2>
-          <p>
-            $$
-            \int_0^1 x^2 \, dx = \frac{1}{3}
-            $$
-          </p>
-          <small>This is a small math note.</small>
-        </section>
-
-        <!-- Slide 3 -->
-        <section>
-          <h2>Slide with Video</h2>
-          <video controls width="800">
-            <source src="circle.mp4" type="video/mp4" />
-            Your browser doesn't support the video tag.
-          </video>
-        </section>
-      </div>
+      <section>
+        <h2>Slide with Video</h2>
+        <video controls width="800">
+          <source src="circle.mp4" type="video/mp4" />
+          Your browser doesn't support the video tag.
+        </video>
+      </section>
     </div>
+  </div>
 
-    <!-- Reveal.js core -->
-    <script src="dist/reveal.js"></script>
+  <!-- Reveal.js and plugins -->
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/math/math.js"></script>
 
-    <!-- Plugins -->
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script src="plugin/math/math.js"></script>
-
-    <!-- Reveal.js configuration -->
-    <script>
-      Reveal.initialize({
-        hash: true,
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealNotes,
-          RevealMath.MathJax
-        ]
-      });
-    </script>
-  </body>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealMath.MathJax // enable LaTeX support
+      ]
+    });
+  </script>
+</body>
 </html>
